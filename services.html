@@ -150,5 +150,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const body = document.body;
+
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    body.classList.toggle('nav-open');
+                    console.log('Nav toggle clicked'); // For debugging
+                });
+            }
+        });
+    </script>
 </body>
 </html> 

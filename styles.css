@@ -119,19 +119,15 @@ body {
 
 /* Phone button */
 .phone-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
     background-color: #4CAF50;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
 }
 
 .phone-button:hover {
@@ -223,13 +219,74 @@ body {
 }
 
 @media (max-width: 768px) {
-    .phone-button {
-        display: none;
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     
-    .nav-open .phone-button {
+    .logo {
+        flex: 1;
+        margin-right: 10px;
+    }
+    
+    .phone-button {
+        display: none; /* Hide from header */
+    }
+    
+    .mobile-nav-toggle {
+        margin-left: auto;
+    }
+    
+    /* Add phone button to the mobile menu when open */
+    .nav-open .nav-links {
+        padding-bottom: 15px;
+    }
+    
+    .nav-open .nav-menu::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #eee;
+        margin: 10px 0;
+    }
+    
+    .nav-open .nav-menu {
+        padding-bottom: 15px;
+    }
+    
+    /* Show a larger phone button at the bottom of the mobile menu */
+    .nav-open .nav-menu::before {
+        content: 'Call Us: (206) 518-7126';
+        display: block;
+        padding: 15px 20px;
+        color: #4CAF50;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-button {
+        width: 36px;
+        height: 36px;
         display: flex;
-        margin: 15px 0;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border-radius: 50%;
+        top: 20px; /* Adjust position */
+        right: 70px; /* More space from hamburger */
+    }
+    
+    .phone-button i {
+        margin-right: 0;
+    }
+    
+    /* Hide the phone number text */
+    .phone-button span {
+        display: none;
     }
 }
 
@@ -850,7 +907,7 @@ footer {
     }
     
     .hero-banner {
-        height: 500px;
+        height: 450px;
     }
     
     .hero-content .container {
@@ -871,6 +928,10 @@ footer {
         padding: 12px 25px;
         font-size: 1rem;
     }
+    
+    .hero-image img {
+        object-position: center center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -887,7 +948,7 @@ footer {
     }
     
     .hero-banner {
-        height: 450px;
+        height: 400px;
     }
     
     .hero-content {
@@ -1768,5 +1829,120 @@ textarea.form-control {
     
     .about-image-container {
         height: 200px;
+    }
+}
+
+/* Fix hero image on mobile */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 450px; /* Reduced height on mobile */
+    }
+    
+    .hero-image img {
+        object-position: center center; /* Adjust focus point for mobile */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller font on mobile */
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Improve navigation spacing for mobile */
+@media (max-width: 768px) {
+    .nav-open .nav-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .nav-open .nav-links {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .nav-open .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav-open .nav-links a {
+        display: block;
+        padding: 15px 20px; /* Larger tap target */
+        border-bottom: 1px solid #eee;
+        font-size: 1.1rem; /* Larger font */
+    }
+    
+    .nav-open .nav-links a:hover {
+        background-color: #f8f8f8;
+    }
+}
+
+/* General responsive improvements */
+@media (max-width: 768px) {
+    /* Improve section spacing */
+    section {
+        padding: 40px 0;
+    }
+    
+    /* Adjust grid layouts */
+    .values-grid, .services-grid, .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Adjust welcome section */
+    .welcome-section .container {
+        flex-direction: column;
+    }
+    
+    .welcome-content, .welcome-image {
+        width: 100%;
+    }
+    
+    .welcome-image {
+        margin-top: 30px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Single column layouts on very small screens */
+    .values-grid, .services-grid, .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust font sizes */
+    h2.section-title {
+        font-size: 1.8rem;
+    }
+    
+    p.section-intro {
+        font-size: 1rem;
     }
 } 

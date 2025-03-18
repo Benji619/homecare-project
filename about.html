@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Bethel Family Senior Care Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="main-header">
+        <div class="container nav-container">
             <div class="logo">
-                <h1>Bethel Family Senior Care Home</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bethel Family Senior Care Home Logo" class="logo-image">
+                </a>
+                <div class="logo-text">
+                    <div class="company-name">Bethel Family</div>
+                    <div class="company-tagline">Senior Care Home</div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="tel:+12065187126" class="phone-button"><i class="fas fa-phone"></i> (206) 518-7126</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
     </header>
 
     <main>
         <section class="about-hero">
+            <img src="images/hero/hero-main.jpg" alt="Bethel Family Senior Care Home" class="hero-background">
+            <div class="hero-overlay"></div>
             <div class="about-content">
                 <h2>About Bethel Family Senior Care Home</h2>
                 <p>Founded in December 2024, we are dedicated to providing exceptional care in a warm, home-like environment.</p>
@@ -85,6 +100,87 @@
                 </div>
             </div>
         </section>
+
+        <section id="facility" class="facility-gallery">
+            <img src="images/hero/hero-main.jpg" class="gallery-background-img" alt="">
+            <div class="container">
+                <h2>Our Facility Gallery</h2>
+                <p class="section-intro">Take a virtual tour of our comfortable and welcoming home</p>
+                
+                <div class="gallery-categories">
+                    <button class="gallery-filter active" data-filter="all">All</button>
+                    <button class="gallery-filter" data-filter="common">Common Areas</button>
+                    <button class="gallery-filter" data-filter="private">Private Rooms</button>
+                    <button class="gallery-filter" data-filter="dining">Dining</button>
+                    <button class="gallery-filter" data-filter="outdoor">Outdoor</button>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Common Areas (including bathrooms) -->
+                    <div class="gallery-item" data-category="common">
+                        <img src="images/facility/common-area3.jpeg" alt="Common Area">
+                        <div class="gallery-caption">Main Living Room</div>
+                    </div>
+                    <div class="gallery-item" data-category="common">
+                        <img src="images/facility/common-area4.jpeg" alt="Common Area">
+                        <div class="gallery-caption">Community Space</div>
+                    </div>
+
+                    <div class="gallery-item" data-category="common">
+                        <img src="images/facility/restroom2.jpeg" alt="Accessible Bathroom">
+                        <div class="gallery-caption">Accessible Bathroom</div>
+                    </div>
+                    
+                    <!-- Private Rooms -->
+                    <div class="gallery-item" data-category="private">
+                        <img src="images/facility/private-room1.jpeg" alt="Private Room">
+                        <div class="gallery-caption">Private Room</div>
+                    </div>
+                    <div class="gallery-item" data-category="private">
+                        <img src="images/facility/private-room2.jpeg" alt="Private Room">
+                        <div class="gallery-caption">Resident Bedroom</div>
+                    </div>
+                    
+                    <!-- Dining Areas -->
+                    <div class="gallery-item" data-category="dining">
+                        <img src="images/facility/dining-area1.jpeg" alt="Dining Area">
+                        <div class="gallery-caption">Main Dining Area</div>
+                    </div>
+                    <div class="gallery-item" data-category="dining">
+                        <img src="images/facility/dining-area2.jpeg" alt="Dining Area">
+                        <div class="gallery-caption">Dining Room</div>
+                    </div>
+                    <div class="gallery-item" data-category="dining">
+                        <img src="images/facility/dining-area3.jpeg" alt="Dining Area">
+                        <div class="gallery-caption">Meal Service Area</div>
+                    </div>
+                    
+                    <!-- Outdoor Spaces -->
+                    <div class="gallery-item" data-category="outdoor">
+                        <img src="images/facility/garden1.jpeg" alt="Garden">
+                        <div class="gallery-caption">Garden Area</div>
+                    </div>
+                    <div class="gallery-item" data-category="outdoor">
+                        <img src="images/facility/garden2.jpeg" alt="Garden">
+                        <div class="gallery-caption">Outdoor Patio</div>
+                    </div>
+                    <div class="gallery-item" data-category="outdoor">
+                        <img src="images/facility/garden3.jpeg" alt="Garden">
+                        <div class="gallery-caption">Relaxation Garden</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-modal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="gallery-modal-img">
+                    <div class="modal-caption"></div>
+                    <div class="modal-navigation">
+                        <button class="modal-prev">&lt;</button>
+                        <button class="modal-next">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -100,6 +196,83 @@
                 <p>Monday - Sunday: 8:00 AM - 7:00 PM</p>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bethel Family Senior Care Home. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+    console.log('Script starting...');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM content loaded');
+        
+        // Basic mobile navigation
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const body = document.body;
+
+        if (navToggle) {
+            navToggle.addEventListener('click', function() {
+                body.classList.toggle('nav-open');
+            });
+        }
+
+        // Simple gallery filtering
+        const galleryFilters = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                // Update active filter button
+                galleryFilters.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Show/hide items based on filter
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Simple modal functionality
+        const modal = document.querySelector('.gallery-modal');
+        const modalImg = document.getElementById('gallery-modal-img');
+        const modalCaption = document.querySelector('.gallery-modal .modal-caption');
+        const closeBtn = document.querySelector('.gallery-modal .modal-close');
+
+        // Open modal when clicking on an image
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const caption = this.querySelector('.gallery-caption');
+                
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+                if (caption) {
+                    modalCaption.textContent = caption.textContent;
+                }
+            });
+        });
+        
+        // Close modal
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        }
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    </script>
 </body>
 </html> 

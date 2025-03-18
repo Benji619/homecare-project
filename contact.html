@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Bethel Family Senior Care Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="main-header">
+        <div class="container nav-container">
             <div class="logo">
-                <h1>Bethel Family Senior Care Home</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bethel Family Senior Care Home Logo" class="logo-image">
+                </a>
+                <div class="logo-text">
+                    <div class="company-name">Bethel Family</div>
+                    <div class="company-tagline">Senior Care Home</div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="tel:+12065187126" class="phone-button"><i class="fas fa-phone"></i> (206) 518-7126</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
     </header>
 
     <main>
         <section class="contact-hero">
-            <div class="contact-content">
-                <h2>Contact Us</h2>
-                <p>We're here to answer your questions and help you find the right care solution.</p>
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Contact Us</h2>
+                    <p>We're here to answer your questions and help you find the right care solution for your loved one.</p>
+                </div>
             </div>
         </section>
 
@@ -35,129 +50,139 @@
                     <div class="contact-details">
                         <h3>Get in Touch</h3>
                         <div class="contact-item">
-                            <h4>Address</h4>
-                            <p>5022 110th pl NE marysville, wa, 98271</p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>5022 110th pl NE marysville, wa, 98271</p>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <h4>Phone</h4>
-                            <p><a href="tel:+12065187126">(206) 518-7126</a></p>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+12065187126">(206) 518-7126</a></p>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <h4>Email</h4>
-                            <p><a href="mailto:Bethelfamilyseniorcare1@gmail.com">Bethelfamilyseniorcare1@gmail.com</a></p>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:bethelfamilyseniorcare@gmail.com">bethelfamilyseniorcare@gmail.com</a></p>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <h4>Hours</h4>
-                            <p>Monday - Sunday: 8:00 AM - 7:00 PM</p>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Monday - Sunday: 8:00 AM - 7:00 PM</p>
+                            </div>
                         </div>
                     </div>
-
                     <div class="contact-form">
-                        <h3>Send us a Message</h3>
-                        <iframe 
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSc2fOAxD6lt4LYhs4euKZqH2I2J52yvr-77sOIrHl8NoUuCEg/viewform?embedded=true"
-                            class="google-form"
-                            frameborder="0" 
-                            marginheight="0" 
-                            marginwidth="0">
-                            Loading…
-                        </iframe>
+                        <h3>Send Us a Message</h3>
+                        <form action="https://formsubmit.co/bethelfamilyseniorcare@gmail.com" method="POST" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="_subject" class="form-control">
+                                    <option value="General Inquiry from Website">General Inquiry</option>
+                                    <option value="Schedule a Tour Request">Schedule a Tour</option>
+                                    <option value="Care Assessment Request">Care Assessment</option>
+                                    <option value="Other Inquiry from Website">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            <!-- Redirect after submission -->
+                            <input type="hidden" name="_next" value="https://bethelfamilyseniorcare.com/thank-you.html">
+                            <!-- Prevent spam -->
+                            <input type="hidden" name="_captcha" value="true">
+                            <!-- Disable the default FormSubmit thank you page -->
+                            <input type="hidden" name="_template" value="table">
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="appointment-section">
+        <section class="map-section">
             <div class="container">
-                <h2>Schedule a Tour</h2>
-                <p>We invite you to visit our facility and meet our care team. Schedule a tour to learn more about our services and see our home firsthand.</p>
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfs5Pe_E7gLKxXftm2qn8FFBmQO_mg3OTsbkLnugrQwtxm1cQ/viewform?embedded=true"
-                    class="google-form"
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0">
-                    Loading…
-                </iframe>
+                <h3>Find Us</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.6874002221223!2d-122.1765234!3d48.0723555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549aab97e529d59f%3A0x768486be34f6c211!2s5022%20110th%20Pl%20NE%2C%20Marysville%2C%20WA%2098271!5e0!3m2!1sen!2sus!4v1652345678901!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>What is the admission process?</h4>
+                        <p>Our admission process begins with an initial consultation and assessment to determine care needs. We then develop a personalized care plan, complete necessary paperwork, and coordinate the move-in process.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you accept insurance or Medicaid?</h4>
+                        <p>We accept long-term care insurance and can provide guidance on using these benefits. We also work with families to explore various payment options and financial assistance programs.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can residents bring their own furniture?</h4>
+                        <p>Yes, we encourage residents to bring personal items and furniture to make their space feel like home. We'll work with you to determine what items can be accommodated.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What medical services are available?</h4>
+                        <p>We provide medication management, coordination with healthcare providers, assistance with medical appointments, and monitoring of health conditions. We can arrange for visiting healthcare professionals as needed.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
-    <section class="map-section">
-        <div class="container">
-            <h2>Our Location</h2>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2666.925544279914!2d-122.1234567!3d48.0123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDAwJzQ0LjQiTiAxMjLCsDA3JzI0LjYiVw!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p>5022 110th pl NE marysville, wa, 98271</p>
-                <p>Phone: (206) 518-7126</p>
-                <p>Email: Bethelfamilyseniorcare1@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 5022 110th pl NE marysville, wa, 98271</p>
+                <p><i class="fas fa-phone"></i> (206) 518-7126</p>
+                <p><i class="fas fa-envelope"></i> bethelfamilyseniorcare@gmail.com</p>
             </div>
             <div class="hours">
                 <h3>Hours of Operation</h3>
-                <p>Monday - Sunday: 8:00 AM - 7:00 PM</p>
+                <p><i class="fas fa-clock"></i> Monday - Sunday: 8:00 AM - 7:00 PM</p>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bethel Family Senior Care Home. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile navigation code (same as above)...
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const body = document.body;
 
-        // Form validation
-        const contactForm = document.getElementById('contactForm');
-        const appointmentForm = document.getElementById('appointmentForm');
-
-        function validatePhone(phone) {
-            const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-            return phoneRegex.test(phone);
-        }
-
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const phone = document.getElementById('phone').value;
-            if (!validatePhone(phone)) {
-                alert('Please enter a valid phone number');
-                return;
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    body.classList.toggle('nav-open');
+                });
             }
-
-            // Here you would typically send the form data to a server
-            alert('Thank you for your message. We will contact you soon!');
-            this.reset();
         });
-
-        appointmentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const date = new Date(document.getElementById('tour-date').value);
-            const today = new Date();
-            
-            if (date < today) {
-                alert('Please select a future date');
-                return;
-            }
-
-            // Here you would typically send the form data to a server
-            alert('Thank you for scheduling a tour. We will confirm your appointment soon!');
-            this.reset();
-        });
-    });
     </script>
 </body>
 </html> 

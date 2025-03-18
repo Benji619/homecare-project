@@ -4,154 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bethel Family Senior Care Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="main-header">
+        <div class="container nav-container">
             <div class="logo">
-                <h1>Bethel Family Senior Care Home</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bethel Family Senior Care Home Logo" class="logo-image">
+                </a>
+                <div class="logo-text">
+                    <div class="company-name">Bethel Family</div>
+                    <div class="company-tagline">Senior Care Home</div>
+                </div>
             </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="tel:+12065187126" class="phone-button"><i class="fas fa-phone"></i> (206) 518-7126</a>
             <button class="mobile-nav-toggle" aria-label="Toggle navigation">
                 <span class="hamburger"></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <div class="hero-image">
+                <img src="images/hero/hero.jpg" alt="Bethel Family Senior Care Home">
+                <div class="hero-overlay"></div>
+            </div>
             <div class="hero-content">
-                <h2>Welcome to Bethel Family Senior Care Home</h2>
-                <p>Providing compassionate, personalized care that empowers each resident to live with dignity, comfort, and joy.</p>
-                <a href="contact.html" class="cta-button">Contact Us Today</a>
-            </div>
-        </section>
-
-        <section class="core-values">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Compassion</h3>
-                    <p>Heartfelt, empathetic care that prioritizes well-being and dignity</p>
-                </div>
-                <div class="value-card">
-                    <h3>Respect</h3>
-                    <p>Honoring individuality, choices, and cultural backgrounds</p>
-                </div>
-                <div class="value-card">
-                    <h3>Integrity</h3>
-                    <p>Upholding honesty, transparency, and accountability</p>
-                </div>
-                <div class="value-card">
-                    <h3>Excellence</h3>
-                    <p>Striving for the highest quality of care</p>
+                <div class="container">
+                    <h1>Compassionate Senior Care<br>in a Home-Like Environment</h1>
+                    <p class="hero-subtitle">Where dignity, comfort, and personalized attention come together</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="cta-button">Schedule a Tour</a>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="welcome-content">
+                    <h2>Welcome to Bethel Family Senior Care Home</h2>
+                    <p class="lead-text">Founded in December 2024, we provide exceptional care in a warm, supportive environment that feels like home.</p>
+                    <p>At Bethel Family, we believe that every senior deserves to live with dignity, comfort, and joy. Our dedicated team of professionals is committed to providing personalized care that meets the unique needs of each resident.</p>
+                    <div class="welcome-buttons">
+                        <a href="about.html" class="secondary-button">Learn About Us</a>
+                        <a href="services.html" class="secondary-button">Our Services</a>
+                    </div>
+                </div>
+                <div class="welcome-image">
+                    <img src="images/hero/welcome-image.jpg" alt="Welcoming Living Area">
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Cards -->
+        <section class="core-values-section">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Compassion</h3>
+                        <p>We provide care with kindness, empathy, and genuine concern for each resident's well-being.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Dignity</h3>
+                        <p>We honor each resident's individuality and ensure they are treated with respect and dignity.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Family</h3>
+                        <p>We create a warm, nurturing environment where residents feel like they're part of our family.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>We are committed to providing the highest quality of care and continuously improving our services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facility Showcase -->
+        <section class="facility-showcase">
+            <div class="container">
+                <h2 class="section-title">Our Beautiful Facility</h2>
+                <p class="section-intro">Take a virtual tour of our comfortable and welcoming home</p>
+                
+                <div class="showcase-grid">
+                    <div class="showcase-item large">
+                        <img src="images/facility/common-area3.jpeg" alt="Common Living Area">
+                        <div class="showcase-caption">
+                            <h3>Welcoming Common Areas</h3>
+                            <p>Spacious and comfortable spaces for socializing and relaxation</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="images/facility/private-room1.jpeg" alt="Private Room">
+                        <div class="showcase-caption">
+                            <h3>Private Rooms</h3>
+                            <p>Comfortable, personalized living spaces</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="images/facility/dining-area1.jpeg" alt="Dining Area">
+                        <div class="showcase-caption">
+                            <h3>Dining Area</h3>
+                            <p>Where residents enjoy nutritious, home-cooked meals</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="images/facility/garden1.jpeg" alt="Garden">
+                        <div class="showcase-caption">
+                            <h3>Outdoor Spaces</h3>
+                            <p>Beautiful gardens for fresh air and relaxation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-more-container">
+                    <a href="about.html#facility" class="secondary-button">View Full Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
         <section class="services-preview">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>24/7 Personal Care</h3>
-                    <p>Round-the-clock assistance with daily living activities</p>
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-intro">Comprehensive care tailored to meet individual needs</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>24/7 Personal Care</h3>
+                        <p>Round-the-clock assistance with daily living activities including bathing, dressing, and mobility support.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>Medication Management</h3>
+                        <p>Safe and scheduled administration of medications by trained professionals.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Meal Preparation</h3>
+                        <p>Nutritious, home-cooked meals tailored to dietary needs and preferences.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Medication Management</h3>
-                    <p>Safe and scheduled administration of medications</p>
-                </div>
-                <div class="service-card">
-                    <h3>Meal Preparation</h3>
-                    <p>Nutritious, home-cooked meals tailored to preferences</p>
+                
+                <div class="view-more-container">
+                    <a href="services.html" class="secondary-button">View All Services</a>
                 </div>
             </div>
-            <a href="services.html" class="secondary-button">View All Services</a>
         </section>
 
+        <!-- Testimonials with Improved Design -->
         <section class="testimonials">
             <div class="container">
-                <h2>What Families Say</h2>
+                <h2 class="section-title">What Families Say About Us</h2>
+                <p class="section-intro">Hear from families who have entrusted their loved ones to our care</p>
+                
                 <div class="testimonial-slider">
-                    <div class="testimonial-track">
-                        <div class="testimonial-slide">
-                            <div class="testimonial-content">
-                                <p>"The care and attention my mother receives at Bethel Family Senior Care Home is exceptional. The staff treats her like family."</p>
-                                <div class="testimonial-author">- Sarah Johnson</div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide">
-                            <div class="testimonial-content">
-                                <p>"We couldn't be happier with the compassionate care provided. The facility is always clean and welcoming."</p>
-                                <div class="testimonial-author">- Michael Chen</div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide">
-                            <div class="testimonial-content">
-                                <p>"The staff's dedication to ensuring residents' comfort and happiness is truly remarkable."</p>
-                                <div class="testimonial-author">- Emily Rodriguez</div>
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>The care and attention my mother receives at Bethel Family is exceptional. The staff treats her like family, and I have complete peace of mind knowing she's in good hands.</p>
+                            <div class="testimonial-author">
+                                <h4>Sarah Johnson</h4>
+                                <p>Daughter of Resident</p>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-nav">
-                        <button class="prev-testimonial" aria-label="Previous testimonial">❮</button>
-                        <button class="next-testimonial" aria-label="Next testimonial">❯</button>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>We searched for months to find the right place for my father. From the moment we walked into Bethel Family, we knew this was the perfect home. The staff is compassionate, attentive, and truly cares.</p>
+                            <div class="testimonial-author">
+                                <h4>Michael Thompson</h4>
+                                <p>Son of Resident</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-dots"></div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>The personalized care my aunt receives has made such a difference in her quality of life. She's happier and more engaged than she's been in years. We're so grateful to have found Bethel Family.</p>
+                            <div class="testimonial-author">
+                                <h4>Jennifer Williams</h4>
+                                <p>Niece of Resident</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Learn More?</h2>
+                <p>Contact us today to schedule a tour or to get answers to your questions.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button">Schedule a Tour</a>
+                    <a href="tel:+12065187126" class="phone-button"><i class="fas fa-phone"></i> (206) 518-7126</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <section class="gallery">
-        <div class="container">
-            <h2>Our Facility</h2>
-            <p>Take a virtual tour of our comfortable and welcoming home</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/facility-1.jpg" alt="Common Area" loading="lazy">
-                    <div class="gallery-caption">Welcoming Common Area</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/facility-2.jpg" alt="Private Room" loading="lazy">
-                    <div class="gallery-caption">Comfortable Private Rooms</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/facility-3.jpg" alt="Dining Area" loading="lazy">
-                    <div class="gallery-caption">Spacious Dining Area</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/facility-4.jpg" alt="Garden" loading="lazy">
-                    <div class="gallery-caption">Peaceful Garden Space</div>
-                </div>
-            </div>
-            <div class="gallery-modal">
-                <span class="modal-close">&times;</span>
-                <img class="modal-content" id="modal-img">
-                <div class="modal-caption"></div>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p>5022 110th pl NE marysville, wa, 98271</p>
-                <p>Phone: (206) 518-7126</p>
-                <p>Email: Bethelfamilyseniorcare1@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 5022 110th pl NE marysville, wa, 98271</p>
+                <p><i class="fas fa-phone"></i> (206) 518-7126</p>
+                <p><i class="fas fa-envelope"></i> Bethelfamilyseniorcare1@gmail.com</p>
             </div>
             <div class="hours">
                 <h3>Hours of Operation</h3>
-                <p>Monday - Sunday: 8:00 AM - 7:00 PM</p>
+                <p><i class="fas fa-clock"></i> Monday - Sunday: 8:00 AM - 7:00 PM</p>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bethel Family Senior Care Home. All rights reserved.</p>
+        </div>
     </footer>
+
+    <div class="showcase-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="showcase-modal-img">
+        <div class="modal-caption"></div>
+    </div>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -163,112 +280,61 @@
             body.classList.toggle('nav-open');
         });
 
-        // Close mobile menu when clicking a link
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                body.classList.remove('nav-open');
-            });
-        });
+        // Showcase Modal
+        const showcaseItems = document.querySelectorAll('.showcase-item');
+        const showcaseModal = document.querySelector('.showcase-modal');
+        const modalImg = document.getElementById('showcase-modal-img');
+        const modalCaption = document.querySelector('.showcase-modal .modal-caption');
+        const closeBtn = document.querySelector('.showcase-modal .modal-close');
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (body.classList.contains('nav-open') && 
-                !event.target.closest('nav') && 
-                !event.target.closest('.mobile-nav-toggle')) {
-                body.classList.remove('nav-open');
-            }
-        });
-
-        // Gallery Modal
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.querySelector('.gallery-modal');
-        const modalImg = document.querySelector('.modal-content');
-        const modalCaption = document.querySelector('.modal-caption');
-        const closeBtn = document.querySelector('.modal-close');
-
-        galleryItems.forEach(item => {
+        showcaseItems.forEach(item => {
             item.addEventListener('click', function() {
                 const img = this.querySelector('img');
-                const caption = this.querySelector('.gallery-caption');
+                const caption = this.querySelector('.showcase-caption h3').textContent;
                 
-                modal.style.display = 'block';
+                showcaseModal.style.display = 'block';
                 modalImg.src = img.src;
-                modalCaption.textContent = caption.textContent;
+                modalCaption.textContent = caption;
             });
         });
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                showcaseModal.style.display = 'none';
+            });
+        }
 
         window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
+            if (e.target === showcaseModal) {
+                showcaseModal.style.display = 'none';
             }
         });
 
-        // Testimonial Slider
-        const track = document.querySelector('.testimonial-track');
+        // Testimonial slider
         const slides = document.querySelectorAll('.testimonial-slide');
-        const nextButton = document.querySelector('.next-testimonial');
-        const prevButton = document.querySelector('.prev-testimonial');
-        const dotsContainer = document.querySelector('.testimonial-dots');
-
-        let currentIndex = 0;
-
-        // Create dots
-        slides.forEach((_, idx) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (idx === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(idx));
-            dotsContainer.appendChild(dot);
-        });
-
         const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
 
-        function updateDots() {
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === currentIndex);
-            });
+        function showSlide(n) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Reset to first slide if at the end
+            currentSlide = (n + slides.length) % slides.length;
+            
+            // Show current slide
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
         }
 
-        function goToSlide(index) {
-            currentIndex = index;
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            updateDots();
-        }
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            goToSlide(currentIndex);
+        // Event listeners for dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
         });
 
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            goToSlide(currentIndex);
-        });
-
-        // Auto-advance slides
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            goToSlide(currentIndex);
-        }, 5000);
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        // Auto-advance slides every 5 seconds
+        setInterval(() => showSlide(currentSlide + 1), 5000);
     });
     </script>
 </body>

@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Bethel Family Senior Care Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="main-header">
+        <div class="container nav-container">
             <div class="logo">
-                <h1>Bethel Family Senior Care Home</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bethel Family Senior Care Home Logo" class="logo-image">
+                </a>
+                <div class="logo-text">
+                    <div class="company-name">Bethel Family</div>
+                    <div class="company-tagline">Senior Care Home</div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="tel:+12065187126" class="phone-button"><i class="fas fa-phone"></i> (206) 518-7126</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
     </header>
 
     <main>
@@ -110,11 +123,15 @@
             </div>
         </section>
 
-        <section class="care-packages">
-            <div class="container">
-                <h2>Personalized Care Plans</h2>
-                <p>We develop individualized care plans based on each resident's needs, preferences, and health requirements. Our team works closely with residents, families, and healthcare providers to ensure comprehensive care coverage.</p>
-                <a href="contact.html" class="cta-button">Contact Us for Care Assessment</a>
+        <section class="care-assessment-cta">
+            <div class="container care-assessment-container">
+                <div class="care-assessment-content">
+                    <h3>Contact Us for Care Assessment</h3>
+                    <p>We develop individualized care plans based on each resident's needs, preferences, and health requirements. Our team works closely with residents, families, and healthcare providers to ensure comprehensive care coverage.</p>
+                </div>
+                <div class="care-assessment-button">
+                    <a href="contact.html" class="assessment-button">Schedule an Assessment</a>
+                </div>
             </div>
         </section>
     </main>

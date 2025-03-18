@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Bethel Family Senior Care Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bethel Family Senior Care Home Logo" class="logo-image">
+                </a>
+                <div class="logo-text">
+                    <div class="company-name">Bethel Family</div>
+                    <div class="company-tagline">Senior Care Home</div>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="tel:+12065187126" class="phone-button"><i class="fas fa-phone"></i> (206) 518-7126</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="thank-you-section">
+            <div class="container">
+                <div class="thank-you-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Thank You!</h2>
+                    <p>Your message has been sent successfully. We appreciate your interest in Bethel Family Senior Care Home.</p>
+                    <p>Our team will review your message and get back to you as soon as possible.</p>
+                    <div class="thank-you-buttons">
+                        <a href="index.html" class="btn-primary">Return to Home</a>
+                        <a href="contact.html" class="btn-secondary">Send Another Message</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 5022 110th pl NE marysville, wa, 98271</p>
+                <p><i class="fas fa-phone"></i> (206) 518-7126</p>
+                <p><i class="fas fa-envelope"></i> Bethelfamilyseniorcare1@gmail.com</p>
+            </div>
+            <div class="hours">
+                <h3>Hours of Operation</h3>
+                <p><i class="fas fa-clock"></i> Monday - Sunday: 8:00 AM - 7:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bethel Family Senior Care Home. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const body = document.body;
+
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    body.classList.toggle('nav-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

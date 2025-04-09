@@ -1946,3 +1946,18 @@ textarea.form-control {
         font-size: 1rem;
     }
 } 
+
+.virtual-tour {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.virtual-tour h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.virtual-tour iframe {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
